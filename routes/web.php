@@ -25,10 +25,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('test/edit/{test}', [TestController::class, 'update'])->name('test.edit');
-Route::put('test/update/{test}', [TestController::class, 'update'])->name('test.update');
-Route::delete('test/{id}', [TestController::class, 'destroy'])->name('test.destroy');
-Route::resource('test', TestController::class)->middleware('auth')->except(['edit', 'update', 'destroy']);
+//Route::get('test/edit/{test}', [TestController::class, 'update'])->name('test.edit');
+//Route::put('test/update/{test}', [TestController::class, 'update'])->name('test.update');
+//Route::delete('test/{id}', [TestController::class, 'destroy'])->name('test.destroy');
+Route::resource('test', TestController::class)->middleware('auth');
 //Route::get('tests/update/{test}', [TestController::class, 'update'])->name('tests.update');
 
 Route::get('/dashboard', function () {
